@@ -91,10 +91,8 @@ app.get('/sun', (req, res) => {
 
 //nasapodroute
 app.get('/nasapod', async(req, res) => {
-    let currDate = new Date().toLocaleDateString('en-CA');
-    console.log(currDate);
     let url =
-    `https://api.nasa.gov/planetary/apod?api_key=9mUzIkhlZCZaOoMfspg7jMmwZCZ4LiRHtkgkambD&date=${currDate}`;
+    `https://api.nasa.gov/planetary/apod?api_key=9mUzIkhlZCZaOoMfspg7jMmwZCZ4LiRHtkgkambD&date=2025-11-23`;
     let response = await fetch(url);
     let data = await response.json();
     let nasapod = data;
