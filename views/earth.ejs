@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <%- include('partials/head.ejs') %>
+<body>
+    <h1>The Solar System</h1>
+
+    <%- include('partials/nav.ejs') %>
+    
+    <div class="page-title"><h2>Planet Earth</h2></div>
+    <div class="main-card">
+
+        <div class="desc-card">
+            <p><%= planetEarth.description %></p>
+        </div>
+        <div class="img-card">
+            <img src="<%= planetEarth.image %>">
+        </div>
+    </div>
+        <div class="info-card">
+            <p><strong><u>Distance from the Sun</u> <br></strong><em><%= planetEarth.distanceFromSun %></em></p>
+            <p><strong><u>Year Length</u> <br></strong><em><%= planetEarth.yearLength %></em></p>
+            <p><strong><u>Radius</u> <br> </strong><em><%= planetEarth.radius %> miles</em></p>
+            <p><strong><u>Moons</u> <br></strong><em><%= planetEarth.moons %></em></p>
+            <p><strong><u>One earth day</u> <br></strong><em><%= planetEarth.oneEarthDay %></em></p>
+            <p><strong>Learn more at <br></strong><a href="<%= planetEarth.websiteLink %>"><em><%= planetEarth.websiteLink %></em></a></p>
+        </div>
+    <br><br>
+    <%- include('partials/footer.ejs') %>
+</body>
+</html>

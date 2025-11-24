@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <%- include('partials/head.ejs') %>
+<body>
+    <h1>The Solar System</h1>
+
+    <%- include('partials/nav.ejs') %>
+    
+    <div class="page-title"><h2>Sun</h2></div>
+    <div class="main-card">
+
+        <div class="desc-card">
+            <p><%= planetSun.description %></p>
+        </div>
+        <div class="img-card">
+            <img src="<%= planetSun.image %>">
+        </div>
+    </div>
+        <br><br>
+        <div class="info-card">
+            <p><strong><u>Distance from the Sun</u> <br></strong><em><%= planetSun.distanceFromSun ? planetSun.distanceFromSun : "N/A" %></em></p>
+            <p><strong><u>Year Length</u> <br></strong><em><%= planetSun.yearLength ? planetSun.yearLength : "N/A" %></em></p>
+            <p><strong><u>Radius</u> <br> </strong><em><%= planetSun.radius ? planetSun.radius : "N/A" %> miles</em></p>
+            <p><strong><u>Moons</u> <br></strong><em><%= planetSun.moons ? planetSun.moons : "N/A" %></em></p>
+            <p><strong><u>One earth day</u> <br></strong><em><%= planetSun.oneEarthDay ? planetSun.oneEarthDay : "N/A" %></em></p>
+            <p><strong>Learn more at <br></strong><a href="<%= planetSun.websiteLink %>"><em><%= planetSun.websiteLink %></em></a></p>
+        </div>
+     
+    <br><br>
+    <%- include('partials/footer.ejs') %>
+</body>
+</html>
