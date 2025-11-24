@@ -9,7 +9,7 @@ app.use(express.static("public")); //folder for static file
 
 //home route
 app.get('/', async(req, res) => {
-    let apiKey = "7756a1e81f817c186cf57294e1c19b37b49c54b8f34e7c499ee0ce5cd86cd16e";
+    let apiKey = "eax8HcflFkzNM5cM8VpsaqFWHBqf5U5Chge6j_bnVFI";
     let url =
     `https://api.unsplash.com/photos/random/?client_id=${apiKey}&featured=true&query=solar-system`;
     let response = await fetch(url);
